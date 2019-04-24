@@ -43,6 +43,7 @@ class MovieContainer extends React.Component {
     constructor() {
         super();
         this.pageNum = 1;
+        this.totalPages = 1;
         this.state = {
             movies: [],
             isLoading: false,
@@ -58,6 +59,9 @@ class MovieContainer extends React.Component {
     getPopularMovies = (page) => {
         fetchMovies(page)
         .then((data) => {
+            if (data.total_pages > this.totalPages) {
+                this.totalPages = data.total_pages;
+            }
             const movies = data.results.map((result) => (
                 {
                     posterPath: result.poster_path,
@@ -75,7 +79,7 @@ class MovieContainer extends React.Component {
 
     handleScroll = (e) => {
         const isBottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
-        if (isBottom) {
+        if (isBottom && this.pageNum <= this.totalPages) {
             this.setState({
                 isLoading: true,
                 error: false
