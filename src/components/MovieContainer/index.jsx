@@ -16,10 +16,12 @@ const Grid = styled.div`
 
   @media (max-width: 960px) {
     grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
   }
 
   @media (max-width: 640px) {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0;
   }
 `;
 
@@ -27,6 +29,14 @@ const Scroller = styled.div`
   width: 80%;
   height: 80%;
   overflow-y: scroll;
+
+  @media (max-width: 960px) {
+    width: 90%;
+  }
+
+  @media (max-width: 640px) {
+    width: 100%;
+  }
 `;
 
 class MovieContainer extends React.Component {
