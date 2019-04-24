@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Poster should render correctly 1`] = `
+<div
+  class="sc-htpNat gGkIdj"
+>
+  <img
+    class="sc-bdVaJa kvPpCZ"
+  />
+</div>
+`;
+
+exports[`Poster should render correctly with img src and title 1`] = `
+<div
+  class="sc-htpNat gGkIdj"
+>
+  <img
+    class="sc-bdVaJa kvPpCZ"
+    src="test.png"
+  />
+</div>
+`;

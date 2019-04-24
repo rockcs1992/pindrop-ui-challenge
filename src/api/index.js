@@ -1,0 +1,10 @@
+import { API_URL } from '../utils/constants';
+
+const fetchHandler = (url) =>
+    fetch(url)
+    .then((response) => response.json())
+    .catch((error) => new Error(error));
+
+export const fetchMovies = (pageNum) => fetchHandler(`${API_URL}${pageNum++}`);
+
+export default fetchHandler;

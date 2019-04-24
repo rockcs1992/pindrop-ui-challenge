@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error Message should render correctly 1`] = `
+<div
+  class="sc-bwzfXH ewMBHc"
+>
+  <h3
+    class="sc-bdVaJa bXaXgR"
+  >
+    Something went wrong
+  </h3>
+</div>
+`;

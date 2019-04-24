@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieContainer should render correctly 1`] = `
+<div
+  class="sc-htoDjs htIreu"
+>
+  <div
+    class="sc-gzVnrw jzbxqH"
+  >
+    0
+  </div>
+</div>
+`;
