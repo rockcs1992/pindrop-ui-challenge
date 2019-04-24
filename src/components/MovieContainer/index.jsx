@@ -67,11 +67,11 @@ class MovieContainer extends React.Component {
                     posterPath: result.poster_path,
                     title: result.original_title,
                     id: result.id
-                }
-                ));
-                this.setState((prevState) => ({
-                    movies: [...prevState.movies, ...movies]
-                }));
+                })
+            );
+            this.setState((prevState) => ({
+                movies: [...prevState.movies, ...movies]
+            }));
         })
         .catch(() => this.setState({ error: true }))
         .finally(() => this.setState({ isLoading: false }));
