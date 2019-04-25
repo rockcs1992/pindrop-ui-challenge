@@ -58,23 +58,25 @@ class MovieContainer extends React.Component {
 
     getPopularMovies = (page) => {
         fetchMovies(page)
-        .then((data) => {
-            if (data.total_pages > this.totalPages) {
-                this.totalPages = data.total_pages;
+        .then((data) => this.handleMovieData(data))
+        .catch(() => this.setState({ error: true, isLoading: false }))
+    }
+
+    handleMovieData = (data) => {
+        if (data.total_pages > this.totalPages) {
+            this.totalPages = data.total_pages;
+        }
+        const movies = data.results.map((result) => (
+            {
+                posterPath: result.poster_path,
+                title: result.original_title,
+                id: result.id
             }
-            const movies = data.results.map((result) => (
-                {
-                    posterPath: result.poster_path,
-                    title: result.original_title,
-                    id: result.id
-                }
-                ));
-                this.setState((prevState) => ({
-                    movies: [...prevState.movies, ...movies]
-                }));
-        })
-        .catch(() => this.setState({ error: true }))
-        .finally(() => this.setState({ isLoading: false }));
+            ));
+        this.setState((prevState) => ({
+            movies: [...prevState.movies, ...movies],
+            isLoading: false
+        }));
     }
 
     handleScroll = (e) => {

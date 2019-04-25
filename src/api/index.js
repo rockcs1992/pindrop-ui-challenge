@@ -5,6 +5,6 @@ const fetchHandler = (url) =>
     .then((response) => response.json())
     .catch((error) => new Error(error));
 
-export const fetchMovies = (pageNum) => fetchHandler(`${API_URL}${pageNum++}`);
+const fetchMovies = (pageNum) => fetchHandler(`${API_URL}${pageNum++}`);
 
-export default fetchHandler;
+export { fetchMovies, fetchHandler };

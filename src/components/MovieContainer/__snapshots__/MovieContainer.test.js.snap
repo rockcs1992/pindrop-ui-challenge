@@ -2,12 +2,95 @@
 
 exports[`MovieContainer should render correctly 1`] = `
 <div
-  class="sc-htoDjs htIreu"
+  class="sc-htoDjs hGFiPY"
 >
   <div
-    class="sc-gzVnrw jzbxqH"
+    class="sc-gzVnrw hhsMHj"
   >
     0
   </div>
 </div>
+`;
+
+exports[`MovieContainer should render correctly when error 1`] = `
+<MovieContainer>
+  <styled.div
+    onScroll={[Function]}
+  >
+    <div
+      className="sc-htoDjs hGFiPY"
+      onScroll={[Function]}
+    >
+      <styled.div>
+        <div
+          className="sc-gzVnrw hhsMHj"
+        >
+          0
+        </div>
+      </styled.div>
+      <_default>
+        <styled.div>
+          <div
+            className="sc-bxivhb EYjjH"
+          >
+            <styled.div>
+              <div
+                className="sc-ifAKCX idnxWS"
+              />
+            </styled.div>
+          </div>
+        </styled.div>
+      </_default>
+      <ErrorMessage>
+        <styled.div>
+          <div
+            className="sc-bZQynM czlNrT"
+          >
+            <styled.h3>
+              <h3
+                className="sc-EHOje hmymRe"
+              >
+                Something went wrong
+              </h3>
+            </styled.h3>
+          </div>
+        </styled.div>
+      </ErrorMessage>
+    </div>
+  </styled.div>
+</MovieContainer>
+`;
+
+exports[`MovieContainer should render correctly when loading 1`] = `
+<MovieContainer>
+  <styled.div
+    onScroll={[Function]}
+  >
+    <div
+      className="sc-htoDjs hGFiPY"
+      onScroll={[Function]}
+    >
+      <styled.div>
+        <div
+          className="sc-gzVnrw hhsMHj"
+        >
+          0
+        </div>
+      </styled.div>
+      <_default>
+        <styled.div>
+          <div
+            className="sc-bxivhb EYjjH"
+          >
+            <styled.div>
+              <div
+                className="sc-ifAKCX idnxWS"
+              />
+            </styled.div>
+          </div>
+        </styled.div>
+      </_default>
+    </div>
+  </styled.div>
+</MovieContainer>
 `;
